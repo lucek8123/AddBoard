@@ -12,13 +12,14 @@ public struct AddBoard: View {
             return AddBoardStyle(backgroundColor: .black, accentColor: .accentColor, textColor: .white, legendTextColor: .gray, dropShadowColor: .gray)
         }
     }
+    
     var dropShadow: Bool
     var title: String
     var legend: String?
     var formSize: CGSize
     var onButtonClick: () -> Void
     
-    var isFullWidth:Bool {
+    var isFullWidth: Bool {
         return self.formSize == AddBoardForm.large
     }
     
