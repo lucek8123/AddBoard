@@ -76,7 +76,7 @@ public struct AddBoard: View {
 }
 struct AddBoard_Previews: PreviewProvider {
     static var previews: some View {
-        AddBoard(style: AddBoardStyle(), dropShadow: true, title: "Apple", legend: "This is Legend", formSize: AddBoardForm.extraLarge) { print("Clicked") }
+        AddBoard(style: AddBoardStyle(), dropShadow: true, title: "Test", legend: "This is Legend", formSize: AddBoardForm.extraLarge) { print("Clicked") }
             .padding(30)
     }
 }
