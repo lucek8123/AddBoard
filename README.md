@@ -15,7 +15,7 @@ import AddBoard
 ''' 
 
 Second make the Add Board in your View
-''' swift 
+``` swift 
 struct ContentView: View {
     VStack {
         ...
@@ -29,6 +29,6 @@ struct ContentView: View {
         ...
     }
 }
-''' 
+``` 
 
 Third - Enjoy AddBoard!
