@@ -5,14 +5,14 @@ I made this SwiftUI package for the best work with [ChartView](https://github.co
 ## Instalation 
 ### Using Swift package manager
 
-In your project go to File -> Add Packages -> Paste 'https://github.com/lucek8123/AddBoard' in the search bar -> Select up to next major version -> Copy Dependency.  
+In your project go to File -> Add Packages -> Paste `https://github.com/lucek8123/AddBoard` in the search bar -> Select up to next major version -> Copy Dependency.  
 
 ## Usage
 
 First you have to import my package 
-''' swift 
+``` swift 
 import AddBoard
-''' 
+``` 
 
 Second make the Add Board in your View
 ``` swift 
