@@ -1,3 +1,3 @@
 # AddBoard
 
-A description of this package.
+I made this package for the best work with [ChartView](https://github.com/AppPear/ChartView). 

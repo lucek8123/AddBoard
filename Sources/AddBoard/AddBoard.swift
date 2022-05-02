@@ -33,13 +33,6 @@ public struct AddBoard: View {
                     Text(self.title)
                         .font(.headline)
                         .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.textColor : self.style.textColor)
-                    if(self.formSize == AddBoardForm.large && self.legend != nil) {
-                        Text(self.legend!)
-                            .font(.callout)
-                            .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.accentColor : self.style.accentColor)
-                            .transition(.opacity)
-                            .animation(.easeOut, value: 3)
-                    }
                     Spacer()
                     self.cornerImage
                         .imageScale(.large)
@@ -47,7 +40,7 @@ public struct AddBoard: View {
                 }
                 .padding()
                 if let legend = legend {
-                    Text(legend.capitalized)
+                    Text(legend)
                         .font(.subheadline.bold())
                         .padding(.horizontal)
                         .foregroundColor(.gray)
@@ -59,14 +52,19 @@ public struct AddBoard: View {
                         onButtonClick()
                     } label: {
                         Image(systemName: "plus")
+                        #if os(watchOS)
+                            .font(.title)
+                            .foregroundColor(self.style.accentColor)
+                        #else
                             .padding()
                             .background(self.colorScheme == .dark ? Color.black : Color.white)
                             .font(.title)
                             .foregroundColor(self.style.accentColor)
                             .clipShape(Circle())
-                            .padding([.trailing, .bottom])
-                            .shadow(color: .gray, radius: 5)                    
+                            .shadow(color: .gray, radius: 5)
+                        #endif
                     }
+                    .padding()
                 }
             }
         }
@@ -78,6 +76,7 @@ public struct AddBoard: View {
 }
 struct AddBoard_Previews: PreviewProvider {
     static var previews: some View {
-        AddBoard(style: AddBoardStyle(), dropShadow: true, title: "Test", formSize: AddBoardForm.medium) { print("Clicked") }
+        AddBoard(style: AddBoardStyle(), dropShadow: true, title: "Apple", legend: "This is Legend", formSize: AddBoardForm.extraLarge) { print("Clicked") }
+            .padding(30)
     }
 }
