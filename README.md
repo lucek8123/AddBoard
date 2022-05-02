@@ -5,7 +5,30 @@ I made this SwiftUI package for the best work with [ChartView](https://github.co
 ## Instalation 
 ### Using Swift package manager
 
-In your project go to File -> Add Packages -> Paste 'https://github.com/lucek8123/AddBoard' in the search bar -> Select up to next minor version -> Copy Dependency.  
+In your project go to File -> Add Packages -> Paste 'https://github.com/lucek8123/AddBoard' in the search bar -> Select up to next major version -> Copy Dependency.  
 
 ## Usage
-_more to come_
+
+First you have to import my package 
+''' swift 
+import AddBoard
+''' 
+
+Second make the Add Board in your View
+''' swift 
+struct ContentView: View {
+    VStack {
+        ...
+        AddBoard(style: AddBoardStyle(), 
+                dropShadow: true, 
+                title: "Test", 
+                legend: "This is Legend", 
+                formSize: AddBoardForm.extraLarge) { 
+            print("Clicked!") 
+        }
+        ...
+    }
+}
+''' 
+
+Third - Enjoy AddBoard!
