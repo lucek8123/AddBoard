@@ -74,6 +74,26 @@ public struct AddBoard: View {
                 minHeight:self.formSize.height,
                 maxHeight:self.formSize.height)
     }
+    
+    public init(cornerImage: Image? = nil, style: AddBoardStyle = AddBoardStyle(), dropShadow: Bool, title: String, legend: String?, formSize: CGSize = AddBoardForm.medium, onButtonClick: @escaping () -> Void) {
+        self.cornerImage = cornerImage
+        self.style = style
+        self.dropShadow = dropShadow
+        self.title = title
+        self.legend = legend
+        self.formSize = formSize
+        self.onButtonClick = onButtonClick
+    }
+    
+    public init(style: AddBoardStyle = AddBoardStyle(), dropShadow: Bool, title: String, formSize: CGSize = AddBoardForm.medium, onButtonClick: @escaping () -> Void) {
+        self.cornerImage = nil
+        self.style = style
+        self.dropShadow = dropShadow
+        self.title = title
+        self.legend = nil
+        self.formSize = formSize
+        self.onButtonClick = onButtonClick
+    }
 }
 struct AddBoard_Previews: PreviewProvider {
     static var previews: some View {
