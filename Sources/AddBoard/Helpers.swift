@@ -58,7 +58,7 @@ public class AddBoardStyle {
     /// Dark mode style of your board.
     public weak var darkModeStyle: AddBoardStyle?
     
-    init(backgroundColor: Color, accentColor: Color, textColor: Color, legendTextColor: Color, dropShadowColor: Color) {
+    public init(backgroundColor: Color, accentColor: Color, textColor: Color, legendTextColor: Color, dropShadowColor: Color) {
         self.backgroundColor = backgroundColor
         self.accentColor = accentColor
         self.textColor = textColor
@@ -66,7 +66,7 @@ public class AddBoardStyle {
         self.dropShadowColor = dropShadowColor
     }
     
-    init(backgroundColor: Color, accentColor: Color, textColor: Color, legendTextColor: Color, dropShadowColor: Color, darkModeStyle: AddBoardStyle) {
+    public init(backgroundColor: Color, accentColor: Color, textColor: Color, legendTextColor: Color, dropShadowColor: Color, darkModeStyle: AddBoardStyle) {
         self.backgroundColor = backgroundColor
         self.accentColor = accentColor
         self.textColor = textColor
@@ -78,7 +78,7 @@ public class AddBoardStyle {
     /// Default init for AddBoardStyle
     ///
     /// If you won't make your own style you can use it.
-    init() {
+    public init() {
         let darkModeStyle = AddBoardStyle(backgroundColor: Color.black,
                                           accentColor: Color.accentColor,
                                           textColor: Color.white,
