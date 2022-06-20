@@ -17,16 +17,18 @@ import AddBoard
 Second make the Add Board in your View
 ``` swift 
 struct ContentView: View {
-    VStack {
-        ...
-        AddBoard(style: AddBoardStyle(), 
-                dropShadow: true, 
-                title: "Test", 
-                legend: "This is Legend", 
-                formSize: AddBoardForm.extraLarge) { 
-            print("Clicked!") 
+    var body: some View {
+        VStack {
+            ...
+            AddBoard(style: AddBoardStyle(), 
+                     dropShadow: true, 
+                     title: "Test", 
+                     legend: "This is Legend", 
+                     formSize: AddBoardForm.extraLarge) { 
+                print("Clicked!") 
+            }
+            ...
         }
-        ...
     }
 }
 ``` 
